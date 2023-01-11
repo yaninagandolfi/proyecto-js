@@ -1,32 +1,28 @@
 
-/*
+
+
 do {
     nombreDeUsuario = prompt("Hola, bienvenido al calculador de porciones, ingresá tu nombre por favor");
     if (nombreDeUsuario == ""){
         alert ("ingresá un nombre por favor")
-
     }
 } while (nombreDeUsuario == "");
 
+calcularReceta()
 
-let cantidad_ingredientes = parseInt(prompt("¿Cuántos ingredientes contiene tu receta?"));
-
-for (let ingrediente = 1; ingrediente <= cantidad_ingredientes; ingrediente++) {
-    let nombreIngrediente = prompt("ingrese nombre del ingrediente")
-    if (escondicionSalida("ESC")) {
-        alert("Nos vemos!")
-        break
+function calcularReceta(){
+    let calcularReceta = confirm(nombreDeUsuario + " vamos a re-calcular los ingredientes de tu receta!");
+    
+    if (calcularReceta == true) {
+        let recetaOriginal = prompt("Introducí la cantidad original de PORCIONES de tu receta");
+        let ingredientesOriginal = prompt("Introducí la cantidad de INGREDIENTES de tu receta a calcular");
+    } else {
+        alert("Por favor ingresá un número")
     }
-
 }
 
-
-recetaOriginal = parseInt(prompt("HOLA " + nombreDeUsuario + ", para cuántas personas es tu receta original?"));
-recetaAcalcular = parseInt(prompt("Para cuantas personas querés convertir los valores de esa receta?"));
-cuantosIngredientes = parseInt(prompt("¿Cuántos ingredientes contiene tu receta?"));
-
-
-
-*/
+for (let ingredientes = 1; ingredientes <= ingredientesOriginal; ingredientes++) {
+    let ingresarNombreIng = prompt("Ingresa el nombre de tu primer ingrediente o ingresa ESC para salir");
+    }
 
 
