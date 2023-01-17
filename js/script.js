@@ -1,28 +1,62 @@
 
+let ingredientesIniciales = 1;
+let montoInicial = 0;
+let nombreIngrediente;
+let precioIngrediente;
+let total;
+let ingredientesTotales = "-";
 
+let receta = prompt(
+  "Hola! Te damos la bienvenida al calculador de recetas! Ingresá el nombre de tu receta por favor"
+);
 
-do {
-    nombreDeUsuario = prompt("Hola, bienvenido al calculador de porciones, ingresá tu nombre por favor");
-    if (nombreDeUsuario == ""){
-        alert ("ingresá un nombre por favor")
-    }
-} while (nombreDeUsuario == "");
+let cantidadIngredientes = parseInt(
+  prompt("Ingresá la cantidad de ingredientes que tiene tu receta")
+);
 
-calcularReceta()
-
-function calcularReceta(){
-    let calcularReceta = confirm(nombreDeUsuario + " vamos a re-calcular los ingredientes de tu receta!");
-    
-    if (calcularReceta == true) {
-        let recetaOriginal = prompt("Introducí la cantidad original de PORCIONES de tu receta");
-        let ingredientesOriginal = prompt("Introducí la cantidad de INGREDIENTES de tu receta a calcular");
-    } else {
-        alert("Por favor ingresá un número")
-    }
+while (isNaN(cantidadIngredientes)) {
+  cantidadIngredientes = prompt("Por favor ingresá un número");
 }
 
-for (let ingredientes = 1; ingredientes <= ingredientesOriginal; ingredientes++) {
-    let ingresarNombreIng = prompt("Ingresa el nombre de tu primer ingrediente o ingresa ESC para salir");
-    }
+for (
+  ingredientesIniciales;
+  ingredientesIniciales <= cantidadIngredientes;
+  ingredientesIniciales++
+) {
+  nombreIngrediente = prompt(
+    "Ingresá el nombre de tu ingrediente número " + ingredientesIniciales
+  );
+  precioIngrediente = parseInt(
+    prompt("Ingresá el precio de tu ingrediente", "0")
+  );
+  while (isNaN(precioIngrediente)) {
+    precioIngrediente = parseInt(prompt("Por favor ingresá un número"));
+  }
+  total = montoInicial += precioIngrediente; //el precio ingresado se suma al monto inicial en cada vuelta
+  ingredientesTotales = nombreIngrediente += "  " + ingredientesTotales; //se suman todos los nombres de los ingredientes en cada vuelta
+}
+
+alert(
+  "El costo total para realizar " +
+    receta +
+    " con: " +
+    ingredientesTotales +
+    " es de $" +
+    total
+);
+
+if (
+  prompt(
+    "Te interesaría saber cuánto podrías tener de ganancias vendiendo " +
+      receta +
+      "? " +
+      "Ingresá SI para calcular o NO para salir del calculador"
+  ) == "SI"
+) {
+  alert("Tus ganancias podrían ser de $" + total * 0.3);
+} else {
+  alert("Gracias por utilizar el calculador de recetas! :)");
+}
+alert("Nos vemos!");
 
 
