@@ -4,14 +4,186 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-    <script src="js/script.js"></script>
-    <title>Proyecto Coderhouse | Javascript </title>
+    <meta name="keywords" content="calculador de recetas calculadora recetario porciones">
+    <meta name="description" content="Calculador de recetas y de ganancias por receta">
+    <!--Google Fonts-->
+        <link rel="preconnect" href="https://fonts.googleapis.com"> 
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">        
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+        <link rel="stylesheet" href="css/style.css">
+        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <title>CALCULADOR DE RECETAS | Home </title>
 </head>
 <body>
-    <main>
-        <div class="container">
-            <h1>Calculador de porciones</h1>
-    </body>
+    <div id="container-fluid">
+
+            <div class="nav-padre">
+                <div class="nav-chica">
+                    <div class="navbar-logo">
+                        <a href="index.html"><img src="images/calculador-logo.jpg" alt="logo"></a>
+                    </div>                    
+                    <nav class="navbar navbar-expand-sm navbar-light">
+                        <button type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarNav">
+                            <ul class="navbar-nav">
+                                <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+                                <li class="nav-item"><a class="nav-link" href="pages/recetas.html">Recetas</a></li>
+                                <li class="nav-item"><a class="nav-link" href="pages/contacto.html">Contacto</a></li>
+                            </ul>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </header>
+<!--Hero-->  
+         <section class="hero-home-bg">  
+            <div class="cont-hero-padre">
+                <div class="cont-hero">
+                    <div class="cont-hero-izq animate__animated animate__bounceInLeft wow">
+                        <div class="tagline">
+                            <p>No pierdas mas tiempo calculando a mano</p>
+                        </div>
+                        <div>
+                            <h1>Todo lo que necesitás saber antes de ponerte a cocinar</h1>
+                        </div>
+                    </div>
+                    <div class="cont-hero-der animate__animated animate__bounceInRight wow">
+                        <img src="images/sarten.png" alt="sarten">
+                    </div>
+                </div>
+            </div>
+        </section>
+ <!--Main-->  
+        <main class="contenedor">
+            <div class="calculador-padre col-md-4 col-sm-12">
+                <div>
+                    <h2>Recalculá tus ingredientes</h2>
+                    <p>Calculá exactamente la cantidad de ingredientes que tu receta necesita para el número de porciones que quieras con esta práctica calculadora.</p>
+                </div>
+                <form>
+                    <div class="mb-6 -mt-3 md:grid md:grid-cols-1">
+                    </div>
+                    <div class="-mb-4 form__group">
+                        <div>
+                            <div class="pb-6 relative">
+                                <label for="NombreReceta" class="block font-normal mb-1 relative text-left">Nombre de tu receta</label>
+                                    <input type="text" class="appearance-none bg-white focus:bg-white bg-none border-gray-300 focus:border-blue-300 rounded border-solid border box-border text-sm m-0 outline-none p-3 focus:placeholder-transparent focus:shadow-blue w-full transition-all duration-200 form-input" style="height:42px" name="NombreReceta" value="" id="NombreReceta" placeholder="" aria-label="" aria-required="false"></div>
+                                    
+                                    <div class="-mb-6">
+                                        <div class="form__group cols-xs--6">
+                                            <div class="form__control-container">
+                                                <div class="pb-6 relative">
+                                                    <label for="PorcionesOriginales" class="block font-normal mb-1 relative text-left text-gray-600 transition-all">Nº de porciones originales</label>
+                                                    <input type="text" class="appearance-none bg-white focus:bg-white bg-none border-gray-300 focus:border-blue-300 rounded border-solid border box-border text-sm m-0 outline-none p-3 focus:placeholder-transparent focus:shadow-blue w-full transition-all duration-200 form-input" style="height:42px" name="PorcionesOriginales" value="" id="PorcionesOriginales" placeholder="" aria-label="" aria-required="false">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    <div class="form__group cols-xs--6">
+                                        <div class="form__control-container">
+                                            <div class="pb-6 relative">
+                                                <label for="porcionesACalcular" class="block font-normal mb-1 relative text-left transition-all">Nº de porciones a calcular</label>
+                                                <input type="text" class="appearance-none bg-white focus:bg-white bg-none border-gray-300 focus:border-blue-300 rounded border-solid border box-border text-sm m-0 outline-none p-3 focus:placeholder-transparent focus:shadow-blue w-full transition-all duration-200 form-input" style="height:42px" name="porcionesACalcular" value="" id="porcionesACalcular" placeholder="" aria-label="" aria-required="false">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    </div>
+                                </div>
+                    </div>
+                    <div>
+                        <div>
+                            <hr>
+                            <h3>Ingredientes</h3>
+                            <p>Ingresá los ingredientes de tu receta original.</p>
+                                <div class="flex"></div>
+                        </div>
+                    </div>
+                    <div>
+                        <div>
+                            <div class="-mb-6" id="">
+                                <div class="pb-6 relative">
+                                    <input class="appearance-none bg-white focus:bg-white bg-none border-gray-300 focus:border-blue-300 rounded border-solid border box-border text-sm m-0 outline-none p-3 focus:placeholder-transparent focus:shadow-blue w-full transition-all duration-200 form-input   " name="nombreIngrediente" id="" type="text" placeholder="Nombre del ingrediente" aria-label="Nombre del ingrediente" aria-required="false" value="" style="height: 52px;">
+                                </div>
+                                <div class="pb-6 relative">
+                                    <input class="appearance-none bg-white focus:bg-white bg-none border-gray-300 focus:border-blue-300 rounded border-solid border box-border text-sm m-0 outline-none p-3 focus:placeholder-transparent focus:shadow-blue w-full transition-all duration-200 form-input" name="" id="" type="text" placeholder="Cantidad en gramos" aria-label="Cantidad" aria-required="false" value="" style="height: 52px;">
+                                </div>
+                            </div>
+<hr>
+                        <button type="button" class="boton-gris" id="otroIngrediente"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true" width="18" height="18"><path stroke-linecap="round" stroke-linejoin="round" d="M12 4v16m8-8H4"></path></svg> Añadí otro ingrediente</button>
+                    </div>
+                    </div>
+                    <hr>
+                    <div>
+                        <button type="submit" class="boton">Recalcular receta</button>
+                        <button type="button" class="boton-gris">Borrar</button>
+                    </div>
+                </form>
+            </div>
+            <div class="col-md-8 col-sm-12 resultados">
+                <div id="nombreDeReceta"></div>
+                <div id="explicacionReceta"></div>
+            </div>
+        </main>
+    <!--Footer--> 
+    <footer class="footer">
+            <div class="row">
+                <div class="col-lg-3 col-md-6 col-sm-12">
+                    <h3>Datos útiles</h3>
+                    <p>Calculador de recetas</p>
+                    <p>Calle Principal 123, Buenos Aires, Argentina</p>
+                    <p>Cp 10398</p>
+                    <p>(123) 456-7890</p>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-12">
+                    <h3>
+                        Navega el sitio
+                    </h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="pages/recetas.html">Recetas</a></li>
+                        <li><a href="pages/contacto.html">Contacto</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-12">
+                    <h3>
+                        Comunidad cocinera
+                    </h3>
+                    <form role="form">
+                        <div>
+                            <label for="inputemail">
+                                Sumate al newsletter
+                            </label>
+                            <div><input type="email" class="footer-input" id="inputemail" /></div>
+                        </div>
+                        <button type="submit" class="footer-boton">
+                            Enviar
+                        </button>
+                    </form>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-12">
+                    <h3>
+                        Seguinos
+                    </h3>
+                    <div>
+                        <a href="https://instagram.com"><img src="images/instagram-3.svg" alt="instagram"></a>
+                        <a href="https://facebook.com"><img src="images/facebook-2.svg" alt="facebook"></a>
+                        <a href="#"><img src="images/mail-2.svg" alt="email"></a>
+                    </div>
+                </div>
+            </div>
+    </footer>
+    </div>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js">
+        </script>
+        <script>
+        new WOW().init();
+        </script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous">
+        </script>
+        <script src="js/script.js"></script>
+</body>
 </html>
